@@ -1,0 +1,224 @@
+<html>
+<head>
+<style>
+body {
+  background: linear-gradient(to bottom, #ffd6e8, #fff);
+  overflow-x: hidden;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+/* floating hearts */
+.heart {
+  position: fixed;
+  bottom: -20px;
+  font-size: 24px;
+  animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-100vh); opacity: 0; }
+}
+
+/* teddy */
+.teddy {
+  width: 120px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* gift box */
+.gift {
+  font-size: 120px;
+  cursor: pointer;
+  animation: shake 1s infinite;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+</style>
+<meta charset="UTF-8">
+<title>For My Guddu ❤️</title>
+
+<style>
+body{
+  background:#ffe6f0;
+  text-align:center;
+  font-family:Arial;
+  padding:20px;
+}
+.box{
+  margin-top:60px;
+}
+button{
+  padding:12px 30px;
+  font-size:16px;
+  border:none;
+  border-radius:25px;
+  background:#ff4d6d;
+  color:white;
+  cursor:pointer;
+}
+input{
+  padding:10px;
+  border-radius:20px;
+  border:1px solid #ccc;
+  text-align:center;
+}
+img{
+  width:220px;
+  border-radius:15px;
+}
+p{
+  font-size:16px;
+  line-height:1.7;
+}
+.hidden{
+  display:none;
+  color:#ff4d6d;
+  font-weight:bold;
+  margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PASSWORD SCREEN -->
+<div class="box" id="lock">
+  <h2>🔐 Private Website</h2>
+  <p>Password daalo Meri jaan ❤️</p>
+  <input type="password" id="pass">
+  <br><br>
+  <button onclick="check()">Enter</button>
+</div>
+
+<!-- STEP 1 -->
+<div class="box" id="step1" style="display:none">
+  <h2>Hey Guddu ❤️</h2>
+  <p>
+    Ye website sirf tere liye hai  kyuki  tu toh meri jaan hai na💌<br>
+    Dheere dheere dekhio love
+  </p>
+  <button onclick="next(1)">Start</button>
+</div>
+
+<!-- STEP 2 -->
+<div class="box" id="step2" style="display:none">
+  <h2>💌 My First Note</h2>
+  <p>
+    Happy New Year mera gudda ❤️<br>
+    Tu meri zindagi ka sabse pyaara hissa hai.
+or mei teri jindgi ka sbse pyara hissa hu 
+  </p>
+  <button onclick="next(2)">Next</button>
+</div>
+
+<!-- STEP 3 -->
+<div class="box" id="step3" style="display:none">
+  <h2>📸 Our Memories</h2>
+  <img src="photo1.jpg.jpeg"><br><br>
+<p>Yha mene sbse jada comfort feel kiaa..🥹</p>
+<img src="photo2.jpg.jpeg"><br><br>
+<p>Ye wali smile… meri favourite hai 🥹</p>
+<img src="photo3.jpg.jpeg"><br><br>
+<p>Yeh toh meri medicine hai jinda rhne ki 🥹</p>
+  <button onclick="next(3)">Next</button>
+</div>
+
+<!-- STEP 4 -->
+<div class="box" id="step4" style="display:none">
+  <h2>🎵 Our Song</h2>
+
+<audio id="mysong" controls>
+  <source src="song.mp3.mp3" type="audio/mpeg">
+</audio>
+
+<br><br>
+<button onclick="document.getElementById('mysong').play()">Play Song ❤️</button>
+  
+  <p>yeh song sunte hi sirf app ydd aate ho baby ❤️</p>
+  <button onclick="next(4)">Next</button>
+</div>
+
+<!-- STEP 5 LONG PARA -->
+<div class="box" id="step5" style="display:none">
+  <h2>💖 From My Heart Guddu</h2>
+  <p>
+    <!-- 👇👇 YAHAN APNA LONG PARA LIKHNA 👇👇 -->
+    Mujhe smjh nhi aaarha mei kha se start kru tu mere liye sirf ek insaan nhi hai tu mere liye mera privar hai mujhe pta
+nhi tha meri life mei koi aesa aayega jo mujhe itna apnapn dega voh bhi merese chota bcha
+ tu tohh mera sbb kuch hai tere sath jo mujhe sukoon milta hai
+na shyd voh mujhe khi bhi na mile jbb terko bhtke pyaar se dekho jbb tu mere baahon mei hoti hai
+ na lgta hai mene sari duniya jitli tu mere sath reh bss tu nhi toh mei
+nhi ab terko niharna teri pyaari aakhein tere sath tym spend krnaa i love you meri lifeline haa ldd leti hu
+ aapse bht gnda boljati hu but jaan se nhi ldungi toh kisse ldungi
+yrr kbhi chodke mtt jaio bsss tere aage toh mei apne aap ko qurbaan krdu my love meri jind jhan meri 
+bestfrnd meri therapist mera sbb kuch bsss rus jio chodke jaane ki baat
+mtt krio kbhi i love youu so so so so much meri jaan 
+happy new year love.
+    Ye dil sirf tere pyaar ke liye hai ❤️
+    <!-- 👆👆 YAHAN KHATAM 👆👆 -->
+  </p>
+  <button onclick="next(5)">Next</button>
+</div>
+
+<!-- STEP 6 FINAL -->
+<div class="box" id="step6" style="display:none">
+  <h1>❤️ I LOVE YOU ❤️</h1>
+  <h2>MERI JAAN GUDDU</h2>
+  <h3>Happy New Year 2025 🎉</h3>
+
+  <p style="margin-top:30px;">(scroll down 👇)</p>
+
+  <div class="hidden" id="secret">
+    Thank you Guddu…  
+    mujhe choose karne ke liye 💖  
+    Main hamesha teri rahungi.
+  </div>
+</div>
+<style>
+body {
+  background: linear-gradient(to bottom, #ffd6e8, #fff);
+  overflow-x: hidden;
+  font-family: 'Comic Sans MS', cursive;
+}
+<script>
+function check(){
+  var p = document.getElementById("pass").value;
+  if(p === "guddu"){
+    document.getElementById("lock").style.display="none";
+    document.getElementById("step1").style.display="block";
+  }else{
+    alert("Wrong password 😜");
+  }
+}
+
+function next(n){
+  document.getElementById("step"+n).style.display="none";
+  document.getElementById("step"+(n+1)).style.display="block";
+}
+
+window.onscroll = function(){
+  document.getElementById("secret").style.display="block";
+}
+</script>
+<style>
+body {
+  background: linear-gradient(to bottom, #ffd6e8, #fff);
+  overflow-x: hidden;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+/* fl
+</style>
+</body>
+</html>
